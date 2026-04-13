@@ -145,13 +145,13 @@ export function UnitShowcase() {
             <TabsList className="bg-white border border-zinc-200 p-1.5 shadow-sm h-auto flex gap-1 w-full max-w-md justify-between">
               <TabsTrigger
                 value="the-mezzanine"
-                className="px-6 md:px-8 py-3 text-sm md:text-base grow data-[state=active]:bg-zinc-900 data-[state=active]:text-white transition-all font-medium tracking-wide"
+                className="px-3 sm:px-6 md:px-8 py-3 text-sm md:text-base grow data-[state=active]:bg-zinc-900 data-[state=active]:text-white transition-all font-medium tracking-wide"
               >
                 1-Bedroom
               </TabsTrigger>
               <TabsTrigger
                 value="the-panorama"
-                className="px-6 md:px-8 py-3 text-sm md:text-base grow data-[state=active]:bg-zinc-900 data-[state=active]:text-white transition-all font-medium tracking-wide"
+                className="px-3 sm:px-6 md:px-8 py-3 text-sm md:text-base grow data-[state=active]:bg-zinc-900 data-[state=active]:text-white transition-all font-medium tracking-wide"
               >
                 2-Bedroom
               </TabsTrigger>
@@ -184,7 +184,7 @@ export function UnitShowcase() {
                     <p className="text-[0.7rem] tracking-[0.3em] uppercase text-muted-foreground font-medium mb-5">
                       Floor Plans
                     </p>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {unit.floorPlans.map((plan) => (
                         <div key={plan.label} className="bg-white border border-zinc-200 p-4 md:p-5">
                           <p className="text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-3">

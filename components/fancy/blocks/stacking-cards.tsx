@@ -51,7 +51,7 @@ export default function StackingCards({
     <StackingCardsContext.Provider
       value={{ progress: scrollYProgress, scaleMultiplier, totalCards }}
     >
-      <div className={cn(className)} ref={targetRef} {...props}>
+      <div className={cn("relative", className)} ref={targetRef} {...props}>
         {children}
       </div>
     </StackingCardsContext.Provider>

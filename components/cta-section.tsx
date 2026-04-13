@@ -62,7 +62,9 @@ export function CtaSection() {
             <ArrowRight className="w-4 h-4" />
           </a>
           <a
-            href="#brochure"
+            href="/brochure.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 text-sm font-medium tracking-wide border border-zinc-300 text-foreground hover:border-zinc-500 hover:bg-zinc-100 transition-all"
           >
             View Brochure

@@ -14,7 +14,7 @@ const footerLinks = {
     { label: "Virtual Tour", href: "#" },
   ],
   resources: [
-    { label: "View Brochure", href: "#brochure" },
+    { label: "View Brochure", href: "/brochure.pdf", target: "_blank" },
     { label: "FAQs", href: "#" },
     { label: "Privacy Policy", href: "#" },
     { label: "Terms of Service", href: "#" },
@@ -91,6 +91,7 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
+                    {...(link.target ? { target: link.target, rel: "noopener noreferrer" } : {})}
                     className="text-[0.8rem] sm:text-sm text-zinc-400 hover:text-white transition-colors py-0.5 inline-block"
                   >
                     {link.label}

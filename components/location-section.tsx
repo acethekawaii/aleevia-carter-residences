@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { motion } from "motion/react";
 import { MapPin, Building2, ShoppingBag, Cross, GraduationCap, Church, Clock } from "lucide-react";
 interface NearbyPlace {
@@ -50,6 +51,7 @@ const categories: Category[] = [
       { name: "Pasay City East High School", distance: "0.9 km", time: "5 mins" },
       { name: "Padre Zamora Elementary School", distance: "1.1 km", time: "6 mins" },
       { name: "Arellano University — Jose Abad Santos", distance: "2.3 km", time: "11 mins" },
+
     ],
   },
   {
@@ -67,7 +69,7 @@ export function LocationSection() {
   return (
     <section className="bg-background py-28 md:py-40 border-t border-zinc-200">
       <div className="main-container">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20">
+        <div className="space-y-16 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-20">
           {/* Left — Map + Description */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -81,25 +83,25 @@ export function LocationSection() {
             <h2 className="font-heading text-3xl md:text-5xl lg:text-[3.2rem] font-semibold tracking-tight text-foreground leading-[1.1] mb-8">
               Come Home Here
             </h2>
-            {/* Embedded Google Map */}
-            <div className="relative w-full aspect-[4/3] bg-zinc-100 overflow-hidden mb-10">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.8!2d120.9974!3d14.5378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9e3b3d3d3d3%3A0x0!2sPasay%2C+Metro+Manila!5e0!3m2!1sen!2sph!4v1710000000000!5m2!1sen!2sph"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Aleevia Carter Residences location map"
-                className="absolute inset-0"
+            {/* Location Map Graphic - Glassmorphism */}
+            <div className="relative w-full aspect-[4/3] rounded-xl lg:rounded-2xl overflow-hidden mb-10 border border-white/30 shadow-xl shadow-[#8A9082]/20 bg-[#8A9082]/85 backdrop-blur-xl">
+              {/* Glass lighting effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-black/20 pointer-events-none" />
+              
+              <Image
+                src="/assets/map.png"
+                alt="Aleevia Carter Residences neighborhood map"
+                width={1200}
+                height={900}
+                priority
+                className="w-full h-full object-cover sm:object-contain object-center drop-shadow-[0_8px_16px_rgba(0,0,0,0.15)] opacity-95 relative z-10"
               />
             </div>
             <div className="space-y-5 text-muted-foreground leading-relaxed text-base">
-              <p>
+              <p className="text-justify">
                 Aleevia Carter Residences is strategically situated along the Rodriguez corridor, one of Pasay City&rsquo;s most vital urban pockets. Positioned at the nexus of the metropolis&rsquo; primary transit lifelines and major thoroughfares, the residence offers a level of connectivity that effortlessly bridges the gap between the city&rsquo;s key business districts and the international gateway.
               </p>
-              <p>
+              <p className="text-justify">
                 By offering a front-row seat to the best of the city&rsquo;s world-class shopping, dining, and cultural landmarks, Aleevia Carter Residences provides a rare vantage point where convenience is the standard and the entire metro is your backyard.
               </p>
             </div>
@@ -114,7 +116,7 @@ export function LocationSection() {
           >
             <div className="flex items-center gap-2 mb-8">
               <MapPin className="w-5 h-5 text-muted-foreground" />
-              <h3 className="font-heading text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
+              <h3 className="font-heading text-xl md:text-3xl font-semibold tracking-tight text-foreground">
                 Close to the City, Closer to Home
               </h3>
             </div>
@@ -138,10 +140,10 @@ export function LocationSection() {
                         <span className="text-foreground truncate flex-1">
                           {place.name}
                         </span>
-                        <div className="flex items-center gap-4 text-muted-foreground shrink-0">
-                          <span className="w-16 text-right tabular-nums">{place.distance}</span>
-                          <span className="flex items-center gap-1 w-16 text-right tabular-nums">
-                            <Clock className="w-3 h-3" />
+                        <div className="flex items-center gap-4 sm:gap-5 text-muted-foreground shrink-0">
+                          <span className="w-14 sm:w-16 text-right tabular-nums whitespace-nowrap">{place.distance}</span>
+                          <span className="flex items-center justify-start gap-2 w-16 sm:w-20 tabular-nums whitespace-nowrap">
+                            <Clock className="w-3.5 h-3.5 shrink-0" />
                             {place.time}
                           </span>
                         </div>
