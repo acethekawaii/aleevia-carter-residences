@@ -2,43 +2,53 @@ import type { Metadata } from "next";
 
 import { AffordabilityCalculator } from "@/components/financing/affordability-calculator";
 import { CtaBand } from "@/components/sections/cta-band";
+import { JsonLd } from "@/components/seo/json-ld";
 import { Kicker } from "@/components/ui/kicker";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Pag-IBIG calculator",
   description:
     "Estimate your maximum Pag-IBIG home loan and monthly amortization based on your gross monthly income.",
+  alternates: { canonical: "/financing/pag-ibig" },
 };
 
 export default function PagIbigPage() {
   return (
     <>
-      <section className="border-b border-border bg-secondary/40">
-        <div className="main-container pt-32 pb-16 md:pt-40 md:pb-20">
-          <div className="max-w-[48ch]">
+      <JsonLd
+        graph={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Pag-IBIG Calculator", path: "/financing/pag-ibig" },
+          ]),
+        ]}
+      />
+      <section className="main-container pt-28 pb-16 md:pt-32 md:pb-24">
+        <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-3">
+          <div>
             <Kicker tone="gold">Pag-IBIG financing</Kicker>
-            <h1 className="mt-6 font-heading text-h1 font-light text-balance text-foreground">
+            <h1 className="mt-3 font-heading text-h3 font-light text-balance text-foreground">
               Affordability{" "}
               <span className="italic text-primary">calculator.</span>
             </h1>
-            <p className="mt-6 text-body text-muted-foreground">
-              See roughly how much you could borrow toward a home at Aleevia
-              Carter, based on your gross monthly income and the standard
-              Pag-IBIG computation.
-            </p>
           </div>
+          <p className="max-w-[38ch] text-small text-muted-foreground">
+            Drag your income to estimate what you could borrow toward a home at
+            Aleevia Carter — using the standard Pag-IBIG computation.
+          </p>
         </div>
-      </section>
 
-      <section className="main-container py-16 md:py-24">
-        <AffordabilityCalculator
-          lenderName="Pag-IBIG"
-          interestRate={0.0625}
-          maxAmortizationRatio={0.35}
-          loanTerms={[5, 10, 15, 20, 25, 30]}
-          defaultTerm={30}
-          rateNote="3-year fixing"
-        />
+        <div className="mt-10 md:mt-12">
+          <AffordabilityCalculator
+            lenderName="Pag-IBIG"
+            interestRate={0.0625}
+            maxAmortizationRatio={0.35}
+            loanTerms={[5, 10, 15, 20, 25, 30]}
+            defaultTerm={30}
+            rateNote="3-year fixing"
+          />
+        </div>
       </section>
 
       <CtaBand

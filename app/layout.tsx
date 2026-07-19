@@ -1,12 +1,14 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Albert_Sans, Spectral } from "next/font/google";
 import "./globals.css";
-import { ConciergeChat } from "@/components/concierge-chat";
+import { ConciergeChat } from "@/components/concierge/concierge-chat";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { SmoothScroll } from "@/components/providers/smooth-scroll";
+import { JsonLd } from "@/components/seo/json-ld";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import { organizationSchema, websiteSchema } from "@/lib/schema";
 import { SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -29,28 +31,40 @@ export const metadata: Metadata = {
     template: `%s — ${SITE.name}`,
   },
   description: SITE.description,
+  applicationName: SITE.name,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
+    // og:image is supplied site-wide by app/opengraph-image.tsx and overridden
+    // per-segment (financing, blog posts) by their own opengraph-image files.
     type: "website",
     siteName: SITE.name,
     title: `${SITE.name} — ${SITE.tagline}`,
     description: SITE.description,
     url: SITE.url,
     locale: "en_PH",
-    images: [
-      {
-        url: "/assets/hero-exterior.jpg",
-        width: 1200,
-        height: 630,
-        alt: SITE.name,
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE.name} — ${SITE.tagline}`,
     description: SITE.description,
-    images: ["/assets/hero-exterior.jpg"],
   },
+  verification: process.env.GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+    : undefined,
+};
+
+export const viewport: Viewport = {
+  themeColor: "#1c4031",
 };
 
 export default function RootLayout({
@@ -66,6 +80,7 @@ export default function RootLayout({
       )}
     >
       <body className="flex min-h-full flex-col bg-emerald">
+        <JsonLd graph={[organizationSchema(), websiteSchema()]} />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-primary focus:px-4 focus:py-2 focus:text-caption focus:font-medium focus:uppercase focus:tracking-label focus:text-primary-foreground"

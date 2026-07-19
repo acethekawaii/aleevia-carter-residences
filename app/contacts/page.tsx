@@ -9,13 +9,16 @@ import {
 import type { Metadata } from "next";
 
 import { BookingEmbed } from "@/components/booking-embed";
+import { JsonLd } from "@/components/seo/json-ld";
 import { Kicker } from "@/components/ui/kicker";
+import { breadcrumbSchema } from "@/lib/schema";
 import { BOOKING, CONTACT } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Book a viewing",
   description:
     "Book a private viewing of Aleevia Carter Residences. Pick a time and we'll meet you on-site in Pasay City or over Google Meet.",
+  alternates: { canonical: "/contacts" },
 };
 
 const WHAT_TO_EXPECT = [
@@ -58,6 +61,14 @@ const DIRECT_CONTACT = [
 export default function ContactsPage() {
   return (
     <>
+      <JsonLd
+        graph={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Book a viewing", path: "/contacts" },
+          ]),
+        ]}
+      />
       <section className="border-b border-border bg-secondary/40">
         <div className="main-container pt-32 pb-16 md:pt-40 md:pb-20">
           <div className="max-w-[44ch]">

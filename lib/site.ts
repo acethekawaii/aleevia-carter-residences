@@ -10,7 +10,8 @@ export const SITE = {
   name: "Aleevia Carter Residences",
   shortName: "Aleevia Carter",
   developer: "Aleevia Carter Development Corporation",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://aleeviacarter.com",
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://aleeviacarterresidences.com",
   tagline: "Your Haven in the Heart of the City",
   subtitle: "A home built for a life without limits.",
   description:
@@ -28,8 +29,8 @@ export const CONTACT = {
   mapsUrl: "https://maps.google.com/?q=614+E.+Rodriguez+St.,+Pasay+City",
   hours: "7 AM – 4 PM, Monday to Saturday",
   hoursNote: "Messages on Facebook answered around the clock.",
-  // Official Facebook page — update with the live URL when available.
-  facebook: "https://www.facebook.com/aleeviacarterresidences",
+  // Official Facebook page.
+  facebook: "https://www.facebook.com/profile.php?id=61592195754339",
 } as const;
 
 export const LEGAL = {
@@ -56,6 +57,22 @@ export const BOOKING = {
   timezone: "Asia / Manila",
   duration: "30 minutes",
   isConfigured: !BOOKING_EMBED_URL.includes("PLACEHOLDER"),
+} as const;
+
+/**
+ * AI concierge chat API (aleevia-be).
+ *
+ * Shares NEXT_PUBLIC_API_BASE_URL with the blog — the deployed API base URL
+ * including /api/v1 (e.g. https://api.aleeviacarterresidences.com/api/v1).
+ * When unset, the concierge renders as the passive presence badge — no chat,
+ * nothing broken.
+ */
+const CONCIERGE_API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "";
+
+export const CONCIERGE = {
+  apiUrl: CONCIERGE_API_BASE_URL,
+  chatEndpoint: `${CONCIERGE_API_BASE_URL}/concierge/chat`,
+  isConfigured: CONCIERGE_API_BASE_URL.startsWith("http"),
 } as const;
 
 export type NavLeaf = { label: string; href: string; description?: string };
