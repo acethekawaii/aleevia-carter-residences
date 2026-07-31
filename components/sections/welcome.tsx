@@ -42,11 +42,11 @@ export function Welcome() {
         >
           <figure className="relative aspect-4/5 w-full overflow-hidden rounded-md bg-muted">
             <Image
-              src="/assets/interior/reception.png"
-              alt="A Japandi interior at Aleevia Carter: pale plaster walls, oak shelving, and a soft seafoam accent."
+              src="/assets/interiors/hallway.png"
+              alt="A residential corridor at Aleevia Carter, lined with warm timber panelling and lit by a tall window at the far end."
               fill
               sizes="(min-width: 1024px) 45vw, (min-width: 768px) 50vw, 100vw"
-              className="object-cover"
+              className="object-cover object-left"
             />
           </figure>
         </Reveal>

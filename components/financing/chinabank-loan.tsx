@@ -109,8 +109,8 @@ export function ChinabankLoan() {
             <div className="order-1 lg:order-2 lg:col-span-5">
               <figure className="relative aspect-4/5 w-full overflow-hidden rounded-md border border-border bg-card">
                 <Image
-                  src="/assets/chinabank-hero.jpeg"
-                  alt="An architectural model with house keys and a Chinabank card — the housing-loan partnership."
+                  src="/assets/financing/chinabank-housing-loan-hero.webp"
+                  alt="A brass house key on a burgundy loan folio and architectural plans in a warm Japandi interior."
                   fill
                   sizes="(min-width: 1024px) 40vw, 100vw"
                   className="object-cover"

@@ -17,7 +17,7 @@ export const contentType = OG_CONTENT_TYPE;
 export default async function Image() {
   const [fonts, photo] = await Promise.all([
     ogFonts(),
-    loadPublicImage("assets/interior/unit-7/living-room.png"),
+    loadPublicImage("assets/interiors/unit-7/open-plan-living-area.png"),
   ]);
 
   return new ImageResponse(

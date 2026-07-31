@@ -31,7 +31,7 @@ export default async function Image({ params }: Params) {
     : null;
   const photo =
     (await loadRemoteImage(cover)) ??
-    (await loadPublicImage("assets/interior/reception.png"));
+    (await loadPublicImage("assets/interiors/unit-7/living-dining-area.png"));
 
   return new ImageResponse(
     EditorialOg({

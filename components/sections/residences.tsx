@@ -37,21 +37,21 @@ const UNITS: Unit[] = [
     body: "Forty square metres that live larger than they measure. Level one opens into a wide living area with a built-in work desk set by the window; upstairs, the mezzanine becomes a private owner's suite with a queen bed, a long vanity, and an en-suite bath. The hidden kitchen joinery keeps everything calm and uncluttered — a flexible, open home you can make your own.",
     images: [
       {
-        src: "/assets/interior/unit-1/entryway.png",
-        alt: "1-Bedroom Loft entryway, with pale plaster walls and warm oak detailing.",
+        src: "/assets/interiors/unit-1/bedroom-front-view.png",
+        alt: "Wide view of the 1-Bedroom Loft bedroom with sage bedding, warm timber, and built-in wardrobes.",
       },
       {
-        src: "/assets/interior/unit-1/study-area.png",
-        alt: "1-Bedroom Loft study, set against a deep forest-green wall beneath the loft stair.",
+        src: "/assets/interiors/unit-1/entry-corridor.png",
+        alt: "The 1-Bedroom Loft entry corridor with pale joinery, a console desk, and built-in storage.",
       },
       {
-        src: "/assets/interior/unit-1/master-bedroom.png",
-        alt: "1-Bedroom Loft mezzanine bedroom, soft linen and sage tones with a low timber bed.",
+        src: "/assets/interiors/unit-1/built-in-workspace.png",
+        alt: "The 1-Bedroom Loft built-in two-seat workspace with sage cabinetry and warm timber slats.",
       },
     ],
     floorPlans: [
-      { label: "Level 1", src: "/assets/floor-plan/unit-1-level-1.png" },
-      { label: "Mezzanine", src: "/assets/floor-plan/unit-1-mezzanine.png" },
+      { label: "Level 1", src: "/assets/floor-plans/unit-1-level-1.png" },
+      { label: "Mezzanine", src: "/assets/floor-plans/unit-1-mezzanine.png" },
     ],
   },
   {
@@ -63,29 +63,29 @@ const UNITS: Unit[] = [
     body: "Built for people who love to host. Level one is an open plan centred on a generous L-shaped sofa and a four-seater dining table; the mezzanine adds an entertainment loft that can become a media room, a guest lounge, or a quiet office nook with built-in shelving. Sixty square metres with a clear line between the busy day and the restful evening.",
     images: [
       {
-        src: "/assets/interior/unit-7/living-room.png",
-        alt: "2-Bedroom Loft living and dining space with a forest-green feature wall and oak joinery.",
+        src: "/assets/interiors/unit-7/open-plan-living-area.png",
+        alt: "The 2-Bedroom Loft open-plan living area with kitchen joinery, dining space, and a forest-green feature wall.",
       },
       {
-        src: "/assets/interior/unit-7/kitchen.png",
-        alt: "2-Bedroom Loft kitchen with integrated cabinetry and a warm timber breakfast bar.",
+        src: "/assets/interiors/unit-7/under-stair-workspace.png",
+        alt: "The 2-Bedroom Loft workspace tucked beneath the staircase beside a forest-green feature wall.",
       },
       {
-        src: "/assets/interior/unit-7/bedroom.png",
-        alt: "2-Bedroom Loft bedroom in soft sage and linen with a low timber bed.",
+        src: "/assets/interiors/unit-7/bedroom-wide-view.png",
+        alt: "Wide view of the 2-Bedroom Loft bedroom in soft sage and linen with a low timber bed.",
       },
       {
-        src: "/assets/interior/unit-7/bathroom.png",
-        alt: "2-Bedroom Loft bath with stone-textured finishes and warm ambient lighting.",
+        src: "/assets/interiors/unit-7/bedroom-front-view.png",
+        alt: "Front view of the 2-Bedroom Loft bedroom with a timber headboard and teal bedding.",
       },
       {
-        src: "/assets/interior/unit-7/balcony.png",
-        alt: "2-Bedroom Loft dining nook beside the balcony, greenery and afternoon light.",
+        src: "/assets/interiors/unit-7/bedroom-workspace.png",
+        alt: "The 2-Bedroom Loft bedroom workspace beside built-in storage and a wide window.",
       },
     ],
     floorPlans: [
-      { label: "Level 1", src: "/assets/floor-plan/unit-7-level-1.png" },
-      { label: "Mezzanine", src: "/assets/floor-plan/unit-7-mezzanine.png" },
+      { label: "Level 1", src: "/assets/floor-plans/unit-7-level-1.png" },
+      { label: "Mezzanine", src: "/assets/floor-plans/unit-7-mezzanine.png" },
     ],
   },
 ];

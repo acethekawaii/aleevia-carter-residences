@@ -42,7 +42,7 @@ export function Hero() {
         className="absolute inset-0 -z-10 scale-110"
       >
         <Image
-          src="/assets/interior/unit-7/living-room.png"
+          src="/assets/interiors/unit-7/open-plan-living-area.png"
           alt="A warm living and dining space at Aleevia Carter: forest-green feature wall, oak joinery, and soft afternoon light."
           fill
           priority

@@ -95,7 +95,7 @@ type PageMeta = {
         "title": "Inside the Amenities of Aleevia Carter Residences",
         "slug": "amenities-at-aleevia-carter",
         "excerpt": "From a panoramic gym to a golden-hour roofdeck, a look at the four shared spaces...",
-        "coverImageUrl": "/assets/amenities/lounge-area.png",
+        "coverImageUrl": "/assets/amenities/roof-deck-lounge.png",
         "publishedAt": "2026-07-18T09:00:00.000Z",
         "tags": [
           { "name": "Amenities", "slug": "amenities" },
@@ -175,9 +175,20 @@ type Tag = { name: string; slug: string };
 ## Images
 
 - `coverImageUrl` and `ogImageUrl` may be:
-  - a **relative path** (e.g. `/assets/amenities/lounge-area.png`, served from
-    Next `public/`) during the current pre-S3 phase, **or**
-  - an **absolute URL** later, once object storage (Garage/S3) is live.
+  - a **relative path** (e.g. `/assets/amenities/roof-deck-lounge.png`), served from
+    this site's own `public/`, **or**
+  - an **absolute URL** on Cloudflare R2, which is where every image uploaded
+    through the admin CMS lands.
+- **Any R2 host must be listed in `images.remotePatterns` in `next.config.ts`.**
+  `next/image` hard-refuses an unlisted host: dev throws `Invalid src prop`,
+  production answers 400 on `/_next/image`. Nothing upstream warns you — the API
+  stores the URL happily and the CMS previews it fine with a plain `<img>`. Keep
+  the list equal to `publicImageHosts` in the admin's two environment files.
+- Currently allowed: `images.unsplash.com`,
+  `pub-93fb1ea76bd44cf5a087521d14096abd.r2.dev`, `cdn.aleeviacarterresidences.com`.
+- **Markdown body images are unaffected** — `article-body.tsx` renders those with
+  a plain `<img>`, so any host works there. Only `coverImageUrl` and the
+  featured/hero slots go through `next/image`.
 - `next/image` handles a relative path directly. But `og:image` **must be
   absolute** — prepend your site origin when the stored value is relative.
 - Any image field can be `null` — always supply a fallback.
