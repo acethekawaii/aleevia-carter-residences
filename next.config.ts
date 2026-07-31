@@ -18,6 +18,14 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "cdn.aleeviacarterresidences.com",
       },
+      // This site's own canonical host. Post images should normally be written as
+      // root-relative `/assets/…` paths, which are read from disk and need no
+      // entry here at all. This exists so a cover pasted as a full URL to our own
+      // assets still renders instead of silently falling back.
+      {
+        protocol: "https",
+        hostname: "www.aleeviacarterresidences.com",
+      },
     ],
   },
 };

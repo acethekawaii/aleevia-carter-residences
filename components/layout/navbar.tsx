@@ -14,6 +14,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import type { Announcement } from "@/lib/announcement";
 import {
   NAV,
   type NavEntry,
@@ -40,7 +41,15 @@ function useIsActive() {
 const LINK_CLASSES =
   "text-[0.75rem] font-medium uppercase tracking-label text-foreground/70 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:text-foreground";
 
-export function Navbar() {
+/**
+ * `announcement` is fetched by the root layout and passed down rather than
+ * loaded here: this is a client component, so it cannot await anything itself.
+ */
+export function Navbar({
+  announcement,
+}: {
+  announcement: Announcement | null;
+}) {
   const pathname = usePathname();
   const reduceMotion = useReducedMotion();
   const [financingOpen, setFinancingOpen] = React.useState(false);
@@ -88,7 +97,7 @@ export function Navbar() {
       onMouseLeave={() => setFinancingOpen(false)}
       className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/75"
     >
-      <PromotionalBar />
+      <PromotionalBar announcement={announcement} />
 
       <div className="main-container flex h-14 items-center justify-between gap-6 md:h-16">
         {/* Left: wordmark only */}

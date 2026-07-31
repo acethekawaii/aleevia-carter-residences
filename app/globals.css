@@ -234,6 +234,59 @@
   .main-container {
     @apply mx-auto w-full max-w-[87.5rem] px-6 md:px-10 lg:px-12;
   }
+
+  /* Limewashed plaster: the faint tooth of a hand-finished wall, so a brand
+     colour reads as a surface rather than a flat fill. Japandi rooms are all
+     matte lime, clay and paper — a dead hex is the one thing they never are.
+
+     Built from an inline SVG turbulence tile rather than an image: no network
+     request, no raster to go soft on a retina screen, and it scales to any
+     element. `stitchTiles` is what lets the 180px tile repeat without a visible
+     seam. `overlay` is the whole reason one texture serves all four variants —
+     it lightens the light parts and darkens the dark ones, so the same grain
+     works over deep emerald and pale gold without being authored twice.
+
+     The gradient on top is the limewash itself: pigment settles low on a wall,
+     so the surface is faintly brighter at the top edge. It is what stops the
+     grain reading as digital noise. */
+  .surface-plaster {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .surface-plaster::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.22;
+    mix-blend-mode: overlay;
+    background-size: 180px 180px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23p)'/%3E%3C/svg%3E");
+  }
+
+  .surface-plaster::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: linear-gradient(
+      to bottom,
+      rgb(255 255 255 / 0.06),
+      transparent 60%,
+      rgb(0 0 0 / 0.05)
+    );
+  }
+
+  /* Printing a background texture wastes ink and gains nothing on paper. */
+  @media print {
+    .surface-plaster::before,
+    .surface-plaster::after {
+      display: none;
+    }
+  }
 }
 
 /* Lenis smooth scroll — recommended rules. Disabled for reduced-motion users

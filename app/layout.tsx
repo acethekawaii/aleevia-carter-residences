@@ -8,6 +8,7 @@ import { SmoothScroll } from "@/components/providers/smooth-scroll";
 import { JsonLd } from "@/components/seo/json-ld";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import { getAnnouncement } from "@/lib/announcement";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 import { SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -67,9 +68,14 @@ export const viewport: Viewport = {
   themeColor: "#1c4031",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  // Fetched once here because the strip appears on every page and the navbar
+  // that renders it is a client component. Cached for 60s, so this costs one
+  // request a minute rather than one per page view.
+  const announcement = await getAnnouncement();
+
   return (
     <html
       lang="en"
@@ -89,7 +95,7 @@ export default function RootLayout({
         </a>
         <SmoothScroll>
           <ScrollProgress />
-          <Navbar />
+          <Navbar announcement={announcement} />
           <main id="main" className="relative z-10 flex-1 bg-background">
             {children}
           </main>
