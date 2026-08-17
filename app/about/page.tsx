@@ -5,6 +5,7 @@ import { CtaBand } from "@/components/sections/cta-band";
 import { FloorStack } from "@/components/sections/floor-stack";
 import { LocationSection } from "@/components/sections/location-section";
 import { Reception } from "@/components/sections/reception";
+import { StreetView } from "@/components/sections/street-view";
 import { JsonLd } from "@/components/seo/json-ld";
 import { breadcrumbSchema } from "@/lib/schema";
 
@@ -27,12 +28,13 @@ export default function AboutPage() {
         ]}
       />
       {/* Ordered by what a visitor needs first: what the building is, how it
-          is laid out, the one shared room inside it, where it sits, then the
-          record that says it is real. */}
+          is laid out, the one shared room inside it, where it sits, what it
+          looks like from the street, then the record that says it is real. */}
       <AboutSection />
       <FloorStack />
       <Reception />
       <LocationSection />
+      <StreetView />
       <AboutRecord />
       <CtaBand
         title="Want to see it in person?"

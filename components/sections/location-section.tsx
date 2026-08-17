@@ -143,12 +143,12 @@ export function LocationSection() {
         </Reveal>
 
         <Reveal delay={0.05} className="mt-12">
-          <figure className="relative aspect-[16/10] w-full overflow-hidden rounded-md border border-border bg-secondary/40 md:aspect-[2/1]">
+          <figure className="relative aspect-[4/3] w-full overflow-hidden rounded-md bg-sage">
             <Image
               src="/assets/map.png"
               alt="Neighbourhood map locating Aleevia Carter Residences in Pasay City, with nearby malls, schools, and hospitals."
               fill
-              sizes="(min-width: 768px) 90vw, 100vw"
+              sizes="(min-width: 1400px) 1304px, (min-width: 768px) calc(100vw - 80px), calc(100vw - 48px)"
               className="object-contain"
             />
           </figure>

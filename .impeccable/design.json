@@ -1,191 +1,446 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-05-30T00:00:00Z",
+  "generatedAt": "2026-08-05T00:00:00Z",
   "title": "Design System: Aleevia Carter Residences",
   "extensions": {
     "colorMeta": {
       "primary": {
         "role": "primary",
-        "displayName": "Terracotta",
-        "canonical": "oklch(0.455 0.120 42)",
+        "displayName": "Deep Emerald",
+        "canonical": "oklch(0.42 0.058 162)",
         "tonalRamp": [
-          "oklch(0.205 0.060 40)",
-          "oklch(0.275 0.085 41)",
-          "oklch(0.345 0.105 41)",
-          "oklch(0.455 0.120 42)",
-          "oklch(0.560 0.115 44)",
-          "oklch(0.685 0.095 46)",
-          "oklch(0.820 0.055 50)",
-          "oklch(0.930 0.025 58)"
+          "oklch(0.15 0.030 162)",
+          "oklch(0.24 0.042 162)",
+          "oklch(0.33 0.052 162)",
+          "oklch(0.42 0.058 162)",
+          "oklch(0.53 0.056 162)",
+          "oklch(0.66 0.048 162)",
+          "oklch(0.80 0.034 162)",
+          "oklch(0.93 0.016 162)"
+        ]
+      },
+      "emerald": {
+        "role": "secondary",
+        "displayName": "Deep Emerald Surface",
+        "canonical": "oklch(0.34 0.05 165)",
+        "tonalRamp": [
+          "oklch(0.15 0.028 165)",
+          "oklch(0.22 0.038 165)",
+          "oklch(0.28 0.045 165)",
+          "oklch(0.34 0.050 165)",
+          "oklch(0.46 0.050 165)",
+          "oklch(0.60 0.044 165)",
+          "oklch(0.76 0.032 165)",
+          "oklch(0.92 0.015 165)"
+        ]
+      },
+      "sage": {
+        "role": "secondary",
+        "displayName": "Sage",
+        "canonical": "oklch(0.55 0.046 150)",
+        "tonalRamp": [
+          "oklch(0.16 0.024 150)",
+          "oklch(0.25 0.034 150)",
+          "oklch(0.38 0.042 150)",
+          "oklch(0.55 0.046 150)",
+          "oklch(0.66 0.042 150)",
+          "oklch(0.76 0.034 150)",
+          "oklch(0.86 0.024 150)",
+          "oklch(0.95 0.012 150)"
+        ]
+      },
+      "gold": {
+        "role": "tertiary",
+        "displayName": "Brass Gold",
+        "canonical": "oklch(0.72 0.105 86)",
+        "tonalRamp": [
+          "oklch(0.20 0.040 86)",
+          "oklch(0.31 0.062 86)",
+          "oklch(0.43 0.082 86)",
+          "oklch(0.56 0.098 86)",
+          "oklch(0.72 0.105 86)",
+          "oklch(0.82 0.088 86)",
+          "oklch(0.90 0.060 86)",
+          "oklch(0.96 0.028 86)"
         ]
       },
       "background": {
         "role": "neutral",
-        "displayName": "Cream",
-        "canonical": "oklch(0.970 0.008 83)",
+        "displayName": "Cream / Marble",
+        "canonical": "oklch(0.965 0.012 92)",
         "tonalRamp": [
-          "oklch(0.205 0.010 55)",
-          "oklch(0.300 0.012 60)",
-          "oklch(0.430 0.014 65)",
-          "oklch(0.560 0.014 70)",
-          "oklch(0.700 0.014 74)",
-          "oklch(0.830 0.013 78)",
-          "oklch(0.918 0.011 81)",
-          "oklch(0.970 0.008 83)"
+          "oklch(0.20 0.010 92)",
+          "oklch(0.32 0.011 92)",
+          "oklch(0.45 0.012 92)",
+          "oklch(0.58 0.012 92)",
+          "oklch(0.71 0.012 92)",
+          "oklch(0.83 0.012 92)",
+          "oklch(0.91 0.012 92)",
+          "oklch(0.965 0.012 92)"
         ]
       },
       "foreground": {
         "role": "neutral",
-        "displayName": "Warm Ink",
-        "canonical": "oklch(0.255 0.013 55)",
+        "displayName": "Ink",
+        "canonical": "oklch(0.255 0.012 140)",
         "tonalRamp": [
-          "oklch(0.205 0.013 53)",
-          "oklch(0.255 0.013 55)",
-          "oklch(0.330 0.014 58)",
-          "oklch(0.450 0.020 62)",
-          "oklch(0.580 0.018 68)",
-          "oklch(0.720 0.015 74)",
-          "oklch(0.860 0.013 79)",
-          "oklch(0.960 0.009 83)"
+          "oklch(0.15 0.010 140)",
+          "oklch(0.255 0.012 140)",
+          "oklch(0.36 0.014 140)",
+          "oklch(0.47 0.014 140)",
+          "oklch(0.59 0.013 140)",
+          "oklch(0.71 0.012 140)",
+          "oklch(0.83 0.010 140)",
+          "oklch(0.94 0.008 140)"
+        ]
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "oklch(0.984 0.008 92)",
+        "tonalRamp": [
+          "oklch(0.21 0.006 92)",
+          "oklch(0.33 0.007 92)",
+          "oklch(0.46 0.008 92)",
+          "oklch(0.59 0.008 92)",
+          "oklch(0.72 0.008 92)",
+          "oklch(0.84 0.008 92)",
+          "oklch(0.93 0.008 92)",
+          "oklch(0.984 0.008 92)"
         ]
       },
       "secondary": {
         "role": "neutral",
-        "displayName": "Sand",
-        "canonical": "oklch(0.918 0.016 80)",
+        "displayName": "Pale Sage",
+        "canonical": "oklch(0.915 0.022 150)",
         "tonalRamp": [
-          "oklch(0.290 0.014 58)",
-          "oklch(0.400 0.016 64)",
-          "oklch(0.520 0.018 70)",
-          "oklch(0.650 0.018 74)",
-          "oklch(0.770 0.017 77)",
-          "oklch(0.860 0.016 79)",
-          "oklch(0.918 0.016 80)",
-          "oklch(0.955 0.012 82)"
+          "oklch(0.20 0.014 150)",
+          "oklch(0.31 0.019 150)",
+          "oklch(0.43 0.023 150)",
+          "oklch(0.55 0.024 150)",
+          "oklch(0.68 0.024 150)",
+          "oklch(0.80 0.023 150)",
+          "oklch(0.915 0.022 150)",
+          "oklch(0.97 0.012 150)"
+        ]
+      },
+      "accent": {
+        "role": "neutral",
+        "displayName": "Sage-Stone",
+        "canonical": "oklch(0.915 0.02 146)",
+        "tonalRamp": [
+          "oklch(0.20 0.013 146)",
+          "oklch(0.31 0.017 146)",
+          "oklch(0.43 0.021 146)",
+          "oklch(0.55 0.022 146)",
+          "oklch(0.68 0.022 146)",
+          "oklch(0.80 0.021 146)",
+          "oklch(0.915 0.020 146)",
+          "oklch(0.97 0.011 146)"
         ]
       },
       "muted": {
         "role": "neutral",
         "displayName": "Mist",
-        "canonical": "oklch(0.930 0.013 80)",
+        "canonical": "oklch(0.925 0.016 132)",
         "tonalRamp": [
-          "oklch(0.290 0.014 58)",
-          "oklch(0.400 0.016 63)",
-          "oklch(0.450 0.020 62)",
-          "oklch(0.600 0.018 70)",
-          "oklch(0.760 0.016 76)",
-          "oklch(0.870 0.014 79)",
-          "oklch(0.930 0.013 80)",
-          "oklch(0.962 0.010 82)"
+          "oklch(0.21 0.010 132)",
+          "oklch(0.32 0.013 132)",
+          "oklch(0.44 0.016 132)",
+          "oklch(0.56 0.017 132)",
+          "oklch(0.69 0.017 132)",
+          "oklch(0.81 0.017 132)",
+          "oklch(0.925 0.016 132)",
+          "oklch(0.97 0.009 132)"
         ]
       },
-      "accent": {
+      "muted-foreground": {
         "role": "neutral",
-        "displayName": "Warm Stone",
-        "canonical": "oklch(0.916 0.018 78)",
+        "displayName": "Slate-Sage",
+        "canonical": "oklch(0.435 0.022 145)",
         "tonalRamp": [
-          "oklch(0.312 0.016 58)",
-          "oklch(0.420 0.018 63)",
-          "oklch(0.540 0.020 69)",
-          "oklch(0.660 0.020 73)",
-          "oklch(0.780 0.019 76)",
-          "oklch(0.860 0.018 77)",
-          "oklch(0.916 0.018 78)",
-          "oklch(0.955 0.013 81)"
+          "oklch(0.16 0.012 145)",
+          "oklch(0.26 0.018 145)",
+          "oklch(0.435 0.022 145)",
+          "oklch(0.54 0.022 145)",
+          "oklch(0.65 0.021 145)",
+          "oklch(0.77 0.018 145)",
+          "oklch(0.87 0.014 145)",
+          "oklch(0.95 0.008 145)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(0.875 0.014 135)",
+        "tonalRamp": [
+          "oklch(0.20 0.009 135)",
+          "oklch(0.31 0.011 135)",
+          "oklch(0.43 0.013 135)",
+          "oklch(0.55 0.014 135)",
+          "oklch(0.68 0.014 135)",
+          "oklch(0.79 0.014 135)",
+          "oklch(0.875 0.014 135)",
+          "oklch(0.95 0.008 135)"
+        ]
+      },
+      "destructive": {
+        "role": "tertiary",
+        "displayName": "Clay Red",
+        "canonical": "oklch(0.545 0.17 28)",
+        "tonalRamp": [
+          "oklch(0.20 0.070 28)",
+          "oklch(0.29 0.105 28)",
+          "oklch(0.38 0.135 28)",
+          "oklch(0.46 0.155 28)",
+          "oklch(0.545 0.170 28)",
+          "oklch(0.68 0.140 28)",
+          "oklch(0.82 0.090 28)",
+          "oklch(0.94 0.035 28)"
         ]
       }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Hero statement only. One large, well-cut idea per view." },
-      "headline": { "displayName": "Headline", "purpose": "Major section openers." },
-      "title": { "displayName": "Title", "purpose": "Sub-section structure." },
-      "body": { "displayName": "Body", "purpose": "Sustained reading at 17px / lh 1.65, 65-75ch." },
-      "label": { "displayName": "Label", "purpose": "Uppercase buttons, eyebrows, metadata at tracking 0.16em." }
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero statement. One per page, Spectral Light."
+      },
+      "headline": {
+        "displayName": "Headline / h1",
+        "purpose": "Page openers."
+      },
+      "title": {
+        "displayName": "Title / h3",
+        "purpose": "Sub-section structure."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "The unhurried read. 17px at lh 1.65, capped 65-75ch."
+      },
+      "label": {
+        "displayName": "Label / Caption",
+        "purpose": "Buttons, kickers, metadata, nav. Uppercase at 0.16em."
+      }
     },
-    "shadows": [],
+    "shadows": [
+      {
+        "name": "menu-drop",
+        "value": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+        "purpose": "The open financing mega-menu, so it reads as detached from the header."
+      },
+      {
+        "name": "concierge-lift",
+        "value": "0 10px 15px -3px oklch(0.34 0.05 165 / 0.3), 0 4px 6px -4px oklch(0.34 0.05 165 / 0.3)",
+        "purpose": "The floating concierge badge. Tinted emerald rather than neutral gray so it belongs to the palette."
+      },
+      {
+        "name": "panel",
+        "value": "0 20px 25px -5px oklch(0.34 0.05 165 / 0.1), 0 8px 10px -6px oklch(0.34 0.05 165 / 0.1)",
+        "purpose": "The open concierge dialog. Emerald at low opacity — presence without weight."
+      }
+    ],
     "motion": [
-      { "name": "ease-out-quint", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Default easing for entrances and state transitions. Exponential ease-out, no bounce." }
+      {
+        "name": "ease-gentle",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "The one easing in the system. Exponential ease-out: fast arrival, long settle. Never a bounce, never a snap."
+      },
+      {
+        "name": "duration-reveal",
+        "value": "800ms",
+        "purpose": "Scroll-triggered section reveals, fired once per element."
+      },
+      {
+        "name": "distance-reveal",
+        "value": "24px",
+        "purpose": "Vertical travel on a reveal. Zeroed under prefers-reduced-motion, which crossfades in place."
+      },
+      {
+        "name": "duration-color",
+        "value": "300ms",
+        "purpose": "Button and link color transitions. Color only — no size, no lift."
+      },
+      {
+        "name": "duration-arrow",
+        "value": "500ms",
+        "purpose": "The CtaLink trailing arrow's 2px diagonal drift on hover."
+      },
+      {
+        "name": "duration-panel",
+        "value": "300ms",
+        "purpose": "Concierge panel enter and exit: opacity, 12px rise, 0.98 to 1 scale."
+      }
     ],
     "breakpoints": [
       { "name": "sm", "value": "640px" },
       { "name": "md", "value": "768px" },
-      { "name": "lg", "value": "1024px" }
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
     ]
   },
   "components": [
     {
-      "name": "Primary Button",
+      "name": "Primary CTA",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The warm next step. Terracotta surface for the principal action on a screen.",
-      "html": "<button class=\"ds-btn-primary\">Schedule a Visit</button>",
-      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; height: 2.5rem; padding: 0 1.5rem; border: 1px solid transparent; border-radius: 0; background: var(--primary); color: var(--primary-foreground); font-family: 'Albert Sans', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; cursor: pointer; transition: background-color 0.25s cubic-bezier(0.22,1,0.36,1), transform 0.15s ease-out; } .ds-btn-primary:hover { background: color-mix(in oklab, var(--primary) 85%, transparent); } .ds-btn-primary:focus-visible { outline: none; border-color: var(--ring); box-shadow: 0 0 0 2px color-mix(in oklab, var(--ring) 30%, transparent); } .ds-btn-primary:active { transform: translateY(1px); }"
+      "description": "The inquiry affordance. Emerald, uppercase, arrow-bearing — the site's signature control.",
+      "html": "<a class=\"ds-cta-solid\" href=\"#\">Book a viewing<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></a>",
+      "css": ".ds-cta-solid { display: inline-flex; align-items: center; gap: 0.75rem; height: 3rem; padding: 0 1.75rem; border-radius: 0.25rem; background: var(--primary, oklch(0.42 0.058 162)); color: var(--primary-foreground, oklch(0.97 0.012 92)); font-family: \"Albert Sans\", system-ui, sans-serif; font-size: 0.8125rem; font-weight: 500; line-height: 1.5; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; transition: background-color 300ms ease-out; } .ds-cta-solid svg { width: 1rem; height: 1rem; transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-cta-solid:hover { background: color-mix(in oklab, var(--primary, oklch(0.42 0.058 162)) 90%, transparent); } .ds-cta-solid:hover svg { transform: translate(2px, -2px); } .ds-cta-solid:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--background, oklch(0.965 0.012 92)), 0 0 0 4px var(--ring, oklch(0.42 0.058 162)); } .ds-cta-solid:active { transform: translateY(1px); }"
     },
     {
-      "name": "Secondary Button",
-      "kind": "button",
-      "refersTo": "button-secondary",
-      "description": "Quiet alternative action on a warm sand surface.",
-      "html": "<button class=\"ds-btn-secondary\">Learn More</button>",
-      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; height: 2.5rem; padding: 0 1.5rem; border: 1px solid transparent; border-radius: 0; background: var(--secondary); color: var(--secondary-foreground); font-family: 'Albert Sans', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background-color 0.25s cubic-bezier(0.22,1,0.36,1); } .ds-btn-secondary:hover { background: color-mix(in oklab, var(--secondary) 80%, transparent); } .ds-btn-secondary:focus-visible { outline: none; border-color: var(--ring); box-shadow: 0 0 0 2px color-mix(in oklab, var(--ring) 30%, transparent); }"
-    },
-    {
-      "name": "Outline Button",
+      "name": "Outline CTA",
       "kind": "button",
       "refersTo": "button-outline",
-      "description": "Frameless action on a hairline stroke; fills with a warm-stone wash on hover.",
-      "html": "<button class=\"ds-btn-outline\">View the Estate</button>",
-      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; height: 2.5rem; padding: 0 1.5rem; border: 1px solid var(--border); border-radius: 0; background: transparent; color: var(--foreground); font-family: 'Albert Sans', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background-color 0.25s cubic-bezier(0.22,1,0.36,1), color 0.25s; } .ds-btn-outline:hover { background: var(--muted); } .ds-btn-outline:focus-visible { outline: none; border-color: var(--ring); box-shadow: 0 0 0 2px color-mix(in oklab, var(--ring) 30%, transparent); }"
+      "description": "The quiet secondary action on cream. Hover inverts to solid ink.",
+      "html": "<a class=\"ds-cta-outline\" href=\"#\">Download the brochure<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></a>",
+      "css": ".ds-cta-outline { display: inline-flex; align-items: center; gap: 0.75rem; height: 3rem; padding: 0 1.75rem; border-radius: 0.25rem; border: 1px solid color-mix(in oklab, var(--foreground, oklch(0.255 0.012 140)) 25%, transparent); background: transparent; color: var(--foreground, oklch(0.255 0.012 140)); font-family: \"Albert Sans\", system-ui, sans-serif; font-size: 0.8125rem; font-weight: 500; line-height: 1.5; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; transition: background-color 300ms ease-out, color 300ms ease-out, border-color 300ms ease-out; } .ds-cta-outline svg { width: 1rem; height: 1rem; transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-cta-outline:hover { border-color: var(--foreground, oklch(0.255 0.012 140)); background: var(--foreground, oklch(0.255 0.012 140)); color: var(--background, oklch(0.965 0.012 92)); } .ds-cta-outline:hover svg { transform: translate(2px, -2px); } .ds-cta-outline:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--background, oklch(0.965 0.012 92)), 0 0 0 4px var(--foreground, oklch(0.255 0.012 140)); } .ds-cta-outline:active { transform: translateY(1px); }"
     },
     {
-      "name": "Inquiry CTA",
-      "kind": "custom",
-      "refersTo": "button-primary",
-      "description": "Signature call to action with directional arrow. The site's reason to exist; one per screen.",
-      "html": "<a class=\"ds-cta\" href=\"#inquire\">Arrange a Visit <svg class=\"ds-cta-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></a>",
-      "css": ".ds-cta { display: inline-flex; align-items: center; gap: 0.75rem; height: 3rem; padding: 0 1.75rem; border: 1px solid var(--border); border-radius: 0; background: transparent; color: var(--foreground); font-family: 'Albert Sans', system-ui, sans-serif; font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; transition: background-color 0.3s cubic-bezier(0.22,1,0.36,1), color 0.3s, border-color 0.3s; } .ds-cta:hover { background: var(--primary); color: var(--primary-foreground); border-color: var(--primary); } .ds-cta-icon { width: 1rem; height: 1rem; transition: transform 0.5s cubic-bezier(0.22,1,0.36,1); } .ds-cta:hover .ds-cta-icon { transform: translate(2px, -2px); } @media (prefers-reduced-motion: reduce) { .ds-cta-icon, .ds-cta { transition: none; } .ds-cta:hover .ds-cta-icon { transform: none; } }"
+      "name": "Outline CTA on Dark",
+      "kind": "button",
+      "refersTo": "button-outline-light",
+      "description": "The same move for drenched sage and emerald bands. Shown on its intended surface.",
+      "html": "<div class=\"ds-band-emerald\"><a class=\"ds-cta-outline-light\" href=\"#\">See the residences<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></a></div>",
+      "css": ".ds-band-emerald { display: flex; align-items: center; justify-content: center; padding: 2.5rem; background: var(--emerald, oklch(0.34 0.05 165)); } .ds-cta-outline-light { display: inline-flex; align-items: center; gap: 0.75rem; height: 3rem; padding: 0 1.75rem; border-radius: 0.25rem; border: 1px solid color-mix(in oklab, currentColor 40%, transparent); background: transparent; color: var(--emerald-foreground, oklch(0.965 0.012 92)); font-family: \"Albert Sans\", system-ui, sans-serif; font-size: 0.8125rem; font-weight: 500; line-height: 1.5; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; transition: background-color 300ms ease-out, color 300ms ease-out; } .ds-cta-outline-light svg { width: 1rem; height: 1rem; transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-cta-outline-light:hover { background: var(--emerald-foreground, oklch(0.965 0.012 92)); color: var(--emerald, oklch(0.34 0.05 165)); } .ds-cta-outline-light:hover svg { transform: translate(2px, -2px); } .ds-cta-outline-light:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--emerald, oklch(0.34 0.05 165)), 0 0 0 4px var(--emerald-foreground, oklch(0.965 0.012 92)); }"
     },
     {
       "name": "Nav Item",
       "kind": "nav",
+      "refersTo": "nav-item",
+      "description": "Header link. The active page carries the system's one gold underline.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-item\" href=\"#\">Home</a><a class=\"ds-nav-item ds-nav-item--active\" href=\"#\">About</a><a class=\"ds-nav-item\" href=\"#\">Financing</a><a class=\"ds-nav-item\" href=\"#\">Blog</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 2rem; height: 4rem; padding: 0 1.5rem; background: color-mix(in oklab, var(--background, oklch(0.965 0.012 92)) 85%, transparent); border-bottom: 1px solid color-mix(in oklab, var(--border, oklch(0.875 0.014 135)) 70%, transparent); backdrop-filter: blur(8px); } .ds-nav-item { font-family: \"Albert Sans\", system-ui, sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; color: color-mix(in oklab, var(--foreground, oklch(0.255 0.012 140)) 70%, transparent); transition: color 300ms ease-out; } .ds-nav-item:hover { color: var(--foreground, oklch(0.255 0.012 140)); } .ds-nav-item:focus-visible { outline: none; color: var(--foreground, oklch(0.255 0.012 140)); } .ds-nav-item--active { color: var(--foreground, oklch(0.255 0.012 140)); text-decoration: underline; text-decoration-color: var(--gold, oklch(0.72 0.105 86)); text-decoration-thickness: 2px; text-underline-offset: 6px; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Transparent fill on a hairline stroke. Focus shifts the border and adds a thin emerald halo — no glow, no lift.",
+      "html": "<input class=\"ds-input\" type=\"text\" placeholder=\"Your name\" />",
+      "css": ".ds-input { width: 100%; min-width: 0; height: 2rem; padding: 0.25rem 0.625rem; border: 1px solid var(--input, oklch(0.86 0.016 135)); border-radius: 0.25rem; background: transparent; color: var(--foreground, oklch(0.255 0.012 140)); font-family: \"Albert Sans\", system-ui, sans-serif; font-size: 0.75rem; outline: none; transition: border-color 300ms ease-out, box-shadow 300ms ease-out; } .ds-input::placeholder { color: var(--muted-foreground, oklch(0.435 0.022 145)); } .ds-input:focus-visible { border-color: var(--ring, oklch(0.42 0.058 162)); box-shadow: 0 0 0 1px color-mix(in oklab, var(--ring, oklch(0.42 0.058 162)) 50%, transparent); } .ds-input[aria-invalid=\"true\"] { border-color: var(--destructive, oklch(0.545 0.17 28)); box-shadow: 0 0 0 1px color-mix(in oklab, var(--destructive, oklch(0.545 0.17 28)) 20%, transparent); } .ds-input:disabled { opacity: 0.5; cursor: not-allowed; background: color-mix(in oklab, var(--input, oklch(0.86 0.016 135)) 50%, transparent); }"
+    },
+    {
+      "name": "Kicker",
+      "kind": "custom",
       "refersTo": null,
-      "description": "Top navigation link. Quiet uppercase label that resolves to full ink on hover.",
-      "html": "<a class=\"ds-nav-item\" href=\"#\">Financing</a>",
-      "css": ".ds-nav-item { display: inline-flex; align-items: center; height: 2.5rem; padding: 0 0.75rem; color: color-mix(in oklab, var(--foreground) 70%, transparent); font-family: 'Albert Sans', system-ui, sans-serif; font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; transition: color 0.2s ease-out; } .ds-nav-item:hover { color: var(--foreground); }"
+      "description": "The brochure's labelled-section device. Brand voice, used sparingly — not a reflex above every block.",
+      "html": "<div class=\"ds-kicker-stack\"><p class=\"ds-kicker\">The Concept</p><p class=\"ds-kicker ds-kicker--gold\">The Property</p></div>",
+      "css": ".ds-kicker-stack { display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem; } .ds-kicker { margin: 0; font-family: \"Albert Sans\", system-ui, sans-serif; font-size: 0.8125rem; font-weight: 500; line-height: 1.5; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted-foreground, oklch(0.435 0.022 145)); } .ds-kicker--gold { color: var(--gold, oklch(0.72 0.105 86)); }"
+    },
+    {
+      "name": "Announcement Bar",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The system's one plaster-textured surface. Renders only when an announcement is published; four author-selectable variants resolve to tokens, never to hex.",
+      "html": "<div class=\"ds-announce ds-announce--emerald\"><span class=\"ds-announce-msg\">Model unit now open for viewing</span><a class=\"ds-announce-link\" href=\"#\">Book a slot<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a></div>",
+      "css": ".ds-announce { position: relative; isolation: isolate; display: flex; align-items: center; justify-content: center; gap: 0.75rem; padding: 0.5rem 1.5rem; font-family: \"Albert Sans\", system-ui, sans-serif; font-size: 0.8125rem; line-height: 1.5; } .ds-announce::before { content: \"\"; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0.22; mix-blend-mode: overlay; background-size: 180px 180px; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23p)'/%3E%3C/svg%3E\"); } .ds-announce::after { content: \"\"; position: absolute; inset: 0; z-index: -1; pointer-events: none; background-image: linear-gradient(to bottom, rgb(255 255 255 / 0.06), transparent 60%, rgb(0 0 0 / 0.05)); } .ds-announce--emerald { background: var(--emerald, oklch(0.34 0.05 165)); color: var(--emerald-foreground, oklch(0.965 0.012 92)); } .ds-announce-msg { opacity: 0.8; text-align: center; } .ds-announce-link { display: inline-flex; align-items: center; gap: 0.375rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.16em; text-decoration: none; color: var(--gold, oklch(0.72 0.105 86)); transition: color 300ms ease-out; } .ds-announce-link svg { width: 0.75rem; height: 0.75rem; } .ds-announce-link:hover { color: var(--emerald-foreground, oklch(0.965 0.012 92)); } .ds-announce-link:focus-visible { outline: 2px solid var(--gold, oklch(0.72 0.105 86)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Concierge Badge",
+      "kind": "custom",
+      "refersTo": "concierge-fab",
+      "description": "The floating concierge. A real chat launcher when the API is configured, a passive presence badge when it is not — the unconfigured path is a designed state, not a fallback.",
+      "html": "<button class=\"ds-concierge-fab\" type=\"button\" aria-label=\"Open concierge chat\"><span class=\"ds-concierge-dot\"><span class=\"ds-concierge-ping\"></span><span class=\"ds-concierge-core\"></span></span><span>Concierge</span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7.9 20A9 9 0 1 0 4 16.1L2 22z\"/></svg></button>",
+      "css": ".ds-concierge-fab { display: inline-flex; align-items: center; gap: 0.75rem; padding: 0.875rem 1.25rem; border: none; border-radius: 0.25rem; background: var(--emerald, oklch(0.34 0.05 165)); color: var(--emerald-foreground, oklch(0.965 0.012 92)); font-family: \"Albert Sans\", system-ui, sans-serif; font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; box-shadow: 0 10px 15px -3px oklch(0.34 0.05 165 / 0.3), 0 4px 6px -4px oklch(0.34 0.05 165 / 0.3); outline: 1px solid color-mix(in oklab, var(--gold, oklch(0.72 0.105 86)) 30%, transparent); transition: background-color 300ms ease-out; } .ds-concierge-fab svg { width: 1rem; height: 1rem; color: var(--gold, oklch(0.72 0.105 86)); } .ds-concierge-fab:hover { background: color-mix(in oklab, var(--emerald, oklch(0.34 0.05 165)) 90%, transparent); } .ds-concierge-fab:focus-visible { outline: 2px solid var(--gold, oklch(0.72 0.105 86)); outline-offset: 2px; } .ds-concierge-fab:active { transform: translateY(1px); } .ds-concierge-dot { position: relative; display: inline-flex; width: 0.5rem; height: 0.5rem; } .ds-concierge-ping { position: absolute; inset: 0; border-radius: 9999px; background: color-mix(in oklab, var(--gold, oklch(0.72 0.105 86)) 70%, transparent); animation: ds-ping 1.4s cubic-bezier(0, 0, 0.2, 1) infinite; } .ds-concierge-core { position: relative; width: 0.5rem; height: 0.5rem; border-radius: 9999px; background: var(--gold, oklch(0.72 0.105 86)); } @keyframes ds-ping { 75%, 100% { transform: scale(2); opacity: 0; } } @media (prefers-reduced-motion: reduce) { .ds-concierge-ping { animation: none; } }"
+    },
+    {
+      "name": "Chat Bubbles",
+      "kind": "custom",
+      "refersTo": "concierge-panel",
+      "description": "The concierge transcript. User in emerald, assistant in pale sage — both 4px, capped at 85% width so a long reply never fills the panel edge to edge.",
+      "html": "<div class=\"ds-chat\"><div class=\"ds-bubble ds-bubble--user\">How do I book a viewing?</div><div class=\"ds-bubble ds-bubble--assistant\">The model unit is open for walkthroughs. You can pick a 30-minute slot on the contact page, or call Analiza directly.</div></div>",
+      "css": ".ds-chat { display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem; background: var(--card, oklch(0.984 0.008 92)); border: 1px solid var(--border, oklch(0.875 0.014 135)); border-radius: 0.375rem; } .ds-bubble { max-width: 85%; padding: 0.5rem 0.75rem; border-radius: 0.25rem; font-family: \"Albert Sans\", system-ui, sans-serif; font-size: 0.9375rem; line-height: 1.55; white-space: pre-wrap; overflow-wrap: anywhere; } .ds-bubble--user { align-self: flex-end; background: var(--primary, oklch(0.42 0.058 162)); color: var(--primary-foreground, oklch(0.97 0.012 92)); } .ds-bubble--assistant { align-self: flex-start; background: var(--secondary, oklch(0.915 0.022 150)); color: var(--secondary-foreground, oklch(0.3 0.02 150)); }"
     }
   ],
   "narrative": {
     "northStar": "The Unhurried Welcome",
-    "overview": "This system feels like being shown around a beautiful home by someone who genuinely wants you to stay. It borrows the calm editorial warmth of Kinfolk and Cereal: generous whitespace, soft warm light, and type that reads like a printed page rather than an app screen. Color is restrained. Warm cream and sand neutrals carry nearly every surface, and a single terracotta voice appears only where the visitor is invited to act. It is built on shadcn (Tailwind v4, base-ui) with a taupe warm-neutral base; the semantic tokens are the contract.",
+    "overview": "This system feels like being shown around a beautiful home by someone who genuinely wants you to stay. It is Japandi — the calm meeting of Japanese restraint and Scandinavian warmth, drawn directly from the project's brochure: warm wood, organic textures, plaster-soft walls, and a spa-like quiet. Color is committed but never loud. A cream/marble canvas carries the page; sage green is the ambient brand voice; a single deep-emerald voice marks every place the visitor is invited to act; and a rare brass-gold (the brochure's logo metal) appears as a jewel accent, brightest on the dark sage and emerald surfaces.\n\nIt is built on shadcn (Tailwind v4, base-ui primitives). The semantic tokens in the frontmatter are the contract: components consume primary, secondary, muted, accent, border, and friends, plus three brand tokens — gold, sage, emerald — for the moments the page leans into color. Surfaces are matte rather than flat: a limewashed plaster texture exists so a brand color reads as a wall, not a fill.\n\nMotion is choreographed and gentle, never decorative. Scroll-driven reveals ride an exponential ease-out over 0.8s with a 24px lift; site-wide smooth scrolling runs on Lenis; a hairline reading-progress bar tracks the top of the viewport. Everything honors prefers-reduced-motion — Lenis never starts, reveals crossfade in place with no travel, and the concierge's ping and typing dots go static.\n\nIt explicitly rejects four things, carried from PRODUCT.md: it must not look like generic SaaS / proptech, like a listings portal, like luxury-flex, or like corporate sterile templates. Gold is handled with care precisely so it never tips into luxury-flex: it is a thin accent and a metal on dark green, never a shiny button on black.",
     "keyCharacteristics": [
-      "Warm cream surfaces, one rare terracotta voice (restrained strategy)",
+      "Cream/marble canvas, sage ambient voice, one emerald action voice, rare brass-gold accent",
+      "Sage- and emerald-drenched bands (footer, announcement bar, CTA) keep the page from reading as cream monotone",
+      "Limewashed plaster texture so brand surfaces read as material, not as hex",
       "Editorial whitespace and an unhurried reading rhythm",
-      "Spectral serif display paired with Albert Sans body",
-      "Sharp, frameless edges (zero radius) inherited from the current build",
-      "Photography and space carry the emotion, not borders or buttons"
+      "Spectral serif display (light, with italic emphasis) paired with Albert Sans body",
+      "Uniformly soft corners: 4px on controls, 6px on panels; full-bleed bands run edge-to-edge. No hard 0px corners — that consistency is the warmth",
+      "Photography and warm material carry the emotion, not borders or chrome"
     ],
     "rules": [
-      { "name": "The One Warm Voice Rule", "body": "Exactly one accent color exists (terracotta), and it appears only where the visitor is invited to act: primary CTA, links, focus. Its rarity is what makes a call to action feel like an open door.", "section": "colors" },
-      { "name": "The Neutral-Accent Rule", "body": "shadcn's accent token is a warm-stone hover wash, not the brand color. Never repaint accent terracotta to add color; that breaks every menu and ghost-button hover state.", "section": "colors" },
-      { "name": "The Printed-Page Rule", "body": "Body type is set for sustained, comfortable reading: 17px, line-height 1.65, lines capped at 65-75ch. If it reads like dense app UI, it is wrong.", "section": "typography" },
-      { "name": "The Tonal-Layer Rule", "body": "Separate surfaces with warm tone steps (cream to paper to sand), not shadows. A shadow appears only as a genuine response to state.", "section": "elevation" },
-      { "name": "The Gentle Arrival Rule", "body": "Elements ease in; they never bounce, snap, or slide aggressively. Motion is choreography, and must degrade to static for reduced-motion visitors.", "section": "elevation" }
+      {
+        "name": "The One Action Voice Rule",
+        "body": "Emerald (primary) marks where the visitor acts: the inquiry CTA, links, and focus. Gold decorates; emerald acts. Don't repaint decoration emerald or buttons gold.",
+        "section": "colors"
+      },
+      {
+        "name": "The Gold-on-Dark Rule",
+        "body": "Gold is a metal: it sings on emerald and sage, and whispers (or disappears) on cream. Use it for accents and on dark surfaces, never for body text on the cream canvas.",
+        "section": "colors"
+      },
+      {
+        "name": "The Neutral-Accent Rule",
+        "body": "shadcn's accent is a sage-stone hover wash, not a brand color. Never repaint it emerald or gold.",
+        "section": "colors"
+      },
+      {
+        "name": "The Intent-Not-Hex Rule",
+        "body": "Author-facing surfaces (the announcement bar) store a named intent — EMERALD, GOLD, SAGE, INK — that resolves to tokens in code. No hex ever reaches the database, so nothing off-brand or unreadable can be published.",
+        "section": "colors"
+      },
+      {
+        "name": "The Printed-Page Rule",
+        "body": "Body type is set for sustained reading: 17px, line-height 1.65, lines capped at 65-75ch.",
+        "section": "typography"
+      },
+      {
+        "name": "The Three-Tracking Rule",
+        "body": "Only three tracking values for uppercase text: label (0.16em) for buttons and nav, kicker (0.22em) for section labels, monogram (0.3em) for the wordmark. No arbitrary tracking in markup.",
+        "section": "typography"
+      },
+      {
+        "name": "The Kicker-as-Voice Rule",
+        "body": "The brochure's labelled-section device (THE PROPERTY, THE CONCEPT) is used deliberately and sparingly via the Kicker component — it is brand voice, not a reflex above every block.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tonal-Layer Rule",
+        "body": "Separate surfaces with warm tone steps, not shadows. A shadow appears only as a real response to state (an open menu, an open dialog, the concierge badge), never as default decoration.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Warm-Shadow Rule",
+        "body": "When a shadow is warranted it is tinted emerald, never neutral black. A gray shadow on this cream canvas reads as dirt.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Gentle Arrival Rule",
+        "body": "Elements ease in; they never bounce, snap, or slide aggressively. The one easing is cubic-bezier(0.22, 1, 0.36, 1).",
+        "section": "elevation"
+      },
+      {
+        "name": "The No-Hard-Corner Rule",
+        "body": "Nothing interactive is 0px. If a control looks square, it is a bug — the uniform 4px is what makes the system feel warm rather than clinical.",
+        "section": "shapes"
+      }
     ],
     "dos": [
-      "Do lead with warmth, photography, and space; let tonal cream/sand layers carry structure.",
-      "Do reserve terracotta (primary) for inquiry actions, links, and focus, on under 10% of any screen.",
-      "Do set body type at 17px with line-height 1.65 and 65-75ch line length for a broad, age-spanning audience.",
-      "Do keep a low-friction way to inquire within reach from anywhere on the page.",
-      "Do restyle by retuning the shadcn semantic tokens, and keep accent a neutral hover wash.",
-      "Do ease motion in gently on exponential curves and honor prefers-reduced-motion."
+      "Do lead with warmth, photography, and material; let tonal cream → sage → emerald layers carry structure.",
+      "Do reserve emerald (primary) for inquiry actions, links, and focus.",
+      "Do use gold as a rare jewel accent, brightest on dark sage/emerald surfaces — plus the one active-nav underline.",
+      "Do reach for .surface-plaster when a brand-colored band needs to read as a wall rather than a fill.",
+      "Do set body type at 17px / lh 1.65 / 65-75ch.",
+      "Do align every section to .main-container, including the contents of full-bleed bands.",
+      "Do ease motion in on cubic-bezier(0.22, 1, 0.36, 1) and honor prefers-reduced-motion.",
+      "Do tint a shadow emerald on the rare occasion one is warranted."
     ],
     "donts": [
-      "Don't look like generic SaaS / proptech: no gradient heroes, geometric-sans-on-gradient, friendly-app voice, or hero-metric templates.",
-      "Don't adopt listings-portal grammar: no filter rails, repeated card grids, price tags everywhere, or clutter.",
-      "Don't flex luxury: no gold-on-black, no oversized INVEST NOW CTAs, no gradient text, no opulent excess.",
-      "Don't go corporate sterile: no stock-photo handshakes, no navy-and-gray, no lifeless enterprise template feel.",
-      "Don't use pure #000 or #fff, side-stripe accent borders, gradient text, or decorative glassmorphism.",
-      "Don't repaint shadcn's accent token terracotta; it is the neutral hover wash, not the brand voice."
+      "Don't look like generic SaaS / proptech, a listings portal, luxury-flex, or corporate-sterile.",
+      "Don't put gold body text on cream (low contrast) or gold buttons on black (luxury-flex).",
+      "Don't set body copy on sage — it carries large type only. Use emerald when a dark band needs paragraphs.",
+      "Don't use pure #000/#fff, side-stripe accent borders, gradient text, or decorative glassmorphism.",
+      "Don't repaint shadcn's accent; it is the neutral sage-stone hover wash.",
+      "Don't add a shadow as decoration, or a neutral-gray shadow at all.",
+      "Don't ship a theme toggle. .dark exists for shadcn parity only; light is the committed theme.",
+      "Don't invent a new z-index above the ladder in Layout.",
+      "Don't invent facts, prices, or contact details — the brochure (/public/brochure.pdf) and lib/site.ts are the source of truth."
     ]
   }
 }

@@ -83,10 +83,10 @@ export function ChinabankLoan() {
         <div className="main-container pt-32 pb-16 md:pt-40 md:pb-24">
           <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="order-2 lg:order-1 lg:col-span-7">
-              <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-3.5 py-1.5 text-caption font-medium uppercase tracking-label text-muted-foreground">
+              {/* <div className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-3.5 py-1.5 text-caption font-medium uppercase tracking-label text-muted-foreground">
                 <BadgeCheck className="size-3.5 text-primary" />
                 Accredited partner
-              </div>
+              </div> */}
               <h1 className="mt-7 font-heading text-h1 font-light text-balance text-foreground">
                 Chinabank{" "}
                 <span className="italic text-primary">housing loan.</span>
