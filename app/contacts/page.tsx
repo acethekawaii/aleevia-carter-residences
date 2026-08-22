@@ -9,9 +9,12 @@ import {
 import type { Metadata } from "next";
 
 import { BookingEmbed } from "@/components/booking-embed";
+import { AgentsDirectory } from "@/components/sections/agents-directory";
+import { ContactForm } from "@/components/sections/contact-form";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Kicker } from "@/components/ui/kicker";
-import { breadcrumbSchema } from "@/lib/schema";
+import { getAgents } from "@/lib/agents";
+import { breadcrumbSchema, personSchema } from "@/lib/schema";
 import { BOOKING, CONTACT } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -58,7 +61,12 @@ const DIRECT_CONTACT = [
   },
 ];
 
-export default function ContactsPage() {
+export default async function ContactsPage() {
+  // Fetched here rather than inside the section because the directory's search
+  // makes it a client component. Cached for 5 minutes, so this costs one
+  // request per revalidation window rather than one per page view.
+  const agents = await getAgents();
+
   return (
     <>
       <JsonLd
@@ -67,6 +75,7 @@ export default function ContactsPage() {
             { name: "Home", path: "/" },
             { name: "Book a viewing", path: "/contacts" },
           ]),
+          ...agents.map(personSchema),
         ]}
       />
       <section className="border-b border-border bg-secondary/40">
@@ -177,6 +186,10 @@ export default function ContactsPage() {
           </div>
         </div>
       </section>
+
+      <ContactForm />
+
+      <AgentsDirectory agents={agents} />
     </>
   );
 }

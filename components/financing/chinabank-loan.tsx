@@ -1,7 +1,6 @@
-import { BadgeCheck, Briefcase, Building2, FileText } from "lucide-react";
+import { Briefcase, Building2, FileText } from "lucide-react";
 import Image from "next/image";
 
-import { AffordabilityCalculator } from "@/components/financing/affordability-calculator";
 import {
   Accordion,
   AccordionContent,
@@ -96,12 +95,9 @@ export function ChinabankLoan() {
                 most trusted banks. Review the eligibility, documents, and
                 process below — then talk to our specialists.
               </p>
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <div className="mt-10">
                 <CtaLink href="/contacts" variant="solid">
                   Get pre-qualified
-                </CtaLink>
-                <CtaLink href="#calculator" variant="outline" arrow={false}>
-                  Try the calculator
                 </CtaLink>
               </div>
             </div>
@@ -242,34 +238,6 @@ export function ChinabankLoan() {
               </div>
             </div>
           </aside>
-        </div>
-      </section>
-
-      {/* The Chinabank calculator — the CTA above scrolls here */}
-      <section className="border-t border-border bg-secondary/40 py-20 md:py-28">
-        <div className="main-container">
-          <div className="max-w-[48ch]">
-            <Kicker tone="gold">Estimate your loan</Kicker>
-            <h2 className="mt-6 font-heading text-h3 font-normal text-foreground">
-              Chinabank affordability calculator
-            </h2>
-            <p className="mt-6 text-body text-muted-foreground">
-              A quick estimate using Chinabank's indicative rate. Your actual
-              terms are confirmed by the bank during evaluation.
-            </p>
-          </div>
-          <div className="mt-12">
-            <AffordabilityCalculator
-              id="calculator"
-              lenderName="Chinabank"
-              interestRate={0.0625}
-              maxAmortizationRatio={0.35}
-              loanTerms={[5, 10, 15, 20, 25]}
-              defaultTerm={20}
-              maxLtv={0.8}
-              rateNote="3-year fixing"
-            />
-          </div>
         </div>
       </section>
     </>

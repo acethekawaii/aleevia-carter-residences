@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
-const ctaVariants = cva(
+export const ctaVariants = cva(
   "group/cta inline-flex items-center gap-3 rounded-sm font-medium uppercase tracking-label transition-[background-color,color,border-color] duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:translate-y-px",
   {
     variants: {

@@ -27,10 +27,9 @@ export default function PagIbigPage() {
       <section className="main-container pt-28 pb-16 md:pt-32 md:pb-24">
         <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-3">
           <div>
-            <Kicker tone="gold">Pag-IBIG financing</Kicker>
+            <Kicker tone="gold">Affordability calculator</Kicker>
             <h1 className="mt-3 font-heading text-h3 font-light text-balance text-foreground">
-              Affordability{" "}
-              <span className="italic text-primary">calculator.</span>
+              Pag-IBIG <span className="italic text-primary">financing.</span>
             </h1>
           </div>
           <p className="max-w-[38ch] text-small text-muted-foreground">

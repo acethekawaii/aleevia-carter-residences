@@ -6,6 +6,7 @@
  * the rest of the app. Nothing here is invented.
  */
 
+import { type Agent, ROLE_LABELS } from "@/types/agent";
 import type { PostDetail } from "./blog";
 import { CONTACT, SITE } from "./site";
 
@@ -85,6 +86,29 @@ export function breadcrumbSchema(crumbs: Crumb[]) {
       name: crumb.name,
       item: abs(crumb.path),
     })),
+  };
+}
+
+/**
+ * A published broker or sales agent, for local search. Every value is read
+ * straight from the CMS payload — an unknown `role` simply omits `jobTitle`,
+ * and `image` is absolutised because a photo may be stored as a root-relative
+ * path.
+ */
+export function personSchema(agent: Agent) {
+  return {
+    "@type": "Person",
+    name: `${agent.firstName} ${agent.lastName}`,
+    jobTitle: ROLE_LABELS[agent.role],
+    email: agent.email,
+    telephone: agent.contactNumber,
+    image: agent.photoUrl ? abs(agent.photoUrl) : undefined,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: agent.city,
+      addressCountry: agent.country ?? undefined,
+    },
+    worksFor: { "@id": ORG_ID },
   };
 }
 
