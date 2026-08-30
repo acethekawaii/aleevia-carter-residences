@@ -11,11 +11,12 @@ import type { Metadata } from "next";
 import { BookingEmbed } from "@/components/booking-embed";
 import { AgentsDirectory } from "@/components/sections/agents-directory";
 import { ContactForm } from "@/components/sections/contact-form";
+import { GettingHere } from "@/components/sections/getting-here";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Kicker } from "@/components/ui/kicker";
 import { getAgents } from "@/lib/agents";
 import { breadcrumbSchema, personSchema } from "@/lib/schema";
-import { BOOKING, CONTACT } from "@/lib/site";
+import { BOOKING, CONTACT, LOCATION } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Book a viewing",
@@ -57,7 +58,7 @@ const DIRECT_CONTACT = [
     icon: MapPin,
     label: "Showroom",
     value: CONTACT.address,
-    href: CONTACT.mapsUrl,
+    href: LOCATION.mapsUrl,
   },
 ];
 
@@ -186,6 +187,10 @@ export default async function ContactsPage() {
           </div>
         </div>
       </section>
+
+      {/* Cream rather than the About page's sage, because the form below is
+          already a sage band and two in a row would flatten the page. */}
+      <GettingHere className="bg-background" />
 
       <ContactForm />
 

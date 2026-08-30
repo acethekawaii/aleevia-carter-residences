@@ -2,7 +2,14 @@ import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
 import { CtaLink } from "@/components/ui/cta-link";
-import { BROCHURE_PATH, CONTACT, LEGAL, PRIMARY_CTA, SITE } from "@/lib/site";
+import {
+  BROCHURE_PATH,
+  CONTACT,
+  LEGAL,
+  LOCATION,
+  PRIMARY_CTA,
+  SITE,
+} from "@/lib/site";
 
 const COLUMNS: { heading: string; links: { label: string; href: string }[] }[] =
   [
@@ -100,7 +107,7 @@ export function Footer() {
                   className="mt-0.5 size-4 shrink-0 text-gold"
                 />
                 <a
-                  href={CONTACT.mapsUrl}
+                  href={LOCATION.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-colors hover:text-emerald-foreground"

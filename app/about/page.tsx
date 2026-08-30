@@ -3,6 +3,7 @@ import { AboutRecord } from "@/components/sections/about-record";
 import { AboutSection } from "@/components/sections/about-section";
 import { CtaBand } from "@/components/sections/cta-band";
 import { FloorStack } from "@/components/sections/floor-stack";
+import { GettingHere } from "@/components/sections/getting-here";
 import { LocationSection } from "@/components/sections/location-section";
 import { Reception } from "@/components/sections/reception";
 import { StreetView } from "@/components/sections/street-view";
@@ -28,12 +29,14 @@ export default function AboutPage() {
         ]}
       />
       {/* Ordered by what a visitor needs first: what the building is, how it
-          is laid out, the one shared room inside it, where it sits, what it
-          looks like from the street, then the record that says it is real. */}
+          is laid out, the one shared room inside it, where it sits, how to
+          drive to it, what it looks like from the street, then the record
+          that says it is real. */}
       <AboutSection />
       <FloorStack />
       <Reception />
       <LocationSection />
+      <GettingHere />
       <StreetView />
       <AboutRecord />
       <CtaBand

@@ -18,19 +18,62 @@ export const SITE = {
     "A seven-storey Japandi residence in the heart of Pasay City. Thoughtful one- and two-bedroom loft homes, curated amenities, and a low-friction way to book a private viewing.",
 } as const;
 
+/**
+ * The street address, written the way it goes on an envelope. Every other
+ * form of it on the site is derived from these lines, so there is one place
+ * to change it and no half-written version can drift back in.
+ */
+const ADDRESS_LINES = [
+  "614 E. Rodriguez St.",
+  "Pasay City, Metro Manila",
+  "Philippines",
+] as const;
+
 export const CONTACT = {
   contactName: "Analiza Diaz",
   phone: "0943 705 5099",
   phoneHref: "tel:+639437055099",
   email: "diazanne1628@gmail.com",
   emailHref: "mailto:diazanne1628@gmail.com",
-  address: "614 E. Rodriguez St., Pasay City",
-  addressFull: "614 E. Rodriguez St., Pasay City, Metro Manila, Philippines",
-  mapsUrl: "https://maps.google.com/?q=614+E.+Rodriguez+St.,+Pasay+City",
+  addressLines: ADDRESS_LINES,
+  /** Everyday display form: street, city, region. */
+  address: `${ADDRESS_LINES[0]}, ${ADDRESS_LINES[1]}`,
+  /** The postal form, country included. */
+  addressFull: ADDRESS_LINES.join(", "),
   hours: "7 AM – 4 PM, Monday to Saturday",
   hoursNote: "Messages on Facebook answered around the clock.",
   // Official Facebook page.
   facebook: "https://www.facebook.com/profile.php?id=61592195754339",
+} as const;
+
+/**
+ * The pin, read off the building's own Google Maps listing
+ * (https://maps.app.goo.gl/8Xowm8owwSSbsKfm7).
+ *
+ * Worth knowing before touching any of this: the street address on its own
+ * geocodes about 260 m north of the listing, onto the far side of the C-4
+ * rail line. That gap is most of why people arrive at the wrong block, so
+ * every link below is built from the listing and never from the address.
+ *
+ * Turn-by-turn links carry the coordinates, which nothing can re-interpret.
+ * The embed and the place link carry the listing's name, which Google
+ * resolves to the same point and which puts the building's name on the pin
+ * instead of a street number.
+ */
+const PIN = { lat: 14.5358545, lng: 121.0076193 } as const;
+const PIN_QUERY = encodeURIComponent(`${PIN.lat},${PIN.lng}`);
+const PLACE_QUERY = encodeURIComponent(`${SITE.name}, ${CONTACT.address}`);
+
+export const LOCATION = {
+  ...PIN,
+  /** Opens the listing. Maps URLs API, so a phone hands off to the app. */
+  mapsUrl: `https://www.google.com/maps/search/?api=1&query=${PLACE_QUERY}`,
+  /** Starts turn-by-turn directions from wherever the visitor is. */
+  directionsUrl: `https://www.google.com/maps/dir/?api=1&destination=${PIN_QUERY}`,
+  /** Waze universal link: the app on a phone, the live map on a desktop. */
+  wazeUrl: `https://www.waze.com/ul?ll=${PIN_QUERY}&navigate=yes&zoom=17`,
+  /** Interactive embed. Google's keyless form, so no API key or billing. */
+  embedUrl: `https://www.google.com/maps?q=${PLACE_QUERY}&z=17&hl=en&output=embed`,
 } as const;
 
 export const LEGAL = {

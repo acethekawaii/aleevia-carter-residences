@@ -8,7 +8,7 @@
 
 import { type Agent, ROLE_LABELS } from "@/types/agent";
 import type { PostDetail } from "./blog";
-import { CONTACT, SITE } from "./site";
+import { CONTACT, LOCATION, SITE } from "./site";
 
 /** Stable @id anchors so nodes can reference one another across the graph. */
 export const ORG_ID = `${SITE.url}/#organization`;
@@ -42,7 +42,14 @@ export function organizationSchema() {
       addressCountry: "PH",
     },
     areaServed: "Metro Manila, Philippines",
-    hasMap: CONTACT.mapsUrl,
+    // The exact pin, so local search sends people to the door rather than to
+    // whatever the address string happens to geocode to that week.
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: LOCATION.lat,
+      longitude: LOCATION.lng,
+    },
+    hasMap: LOCATION.mapsUrl,
     sameAs: [CONTACT.facebook],
     openingHoursSpecification: [
       {
